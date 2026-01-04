@@ -1,20 +1,18 @@
-pipeline { 
-   agent any
+pipeline {
+    agent any
 
-stages {
-    stage('Build') {
-       steps {
-           sh 'chmod +x build.sh'
-            sh './build.sh'
-}
-}
-stage('Test')
-{
-steps{
-sh 'chmod +x test.sh'
-sh './test.sh'
-}
-}
-}
+    stages {
+        stage('Build') {
+            steps {
+                bat 'build.bat'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                bat 'test.bat'
+            }
+        }
+    }
 }
 

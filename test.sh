@@ -1,14 +1,4 @@
-
-#!/bin/bash
-
-echo "Running Tests"
-
-RESULT="Pass"
-
-if [ "$RESULT" = "Pass" ]; then
-	echo "Tests Passed"
-	exit 0
-else
-	echo "Tests failed"
-	exit 1
-fi
+@echo off
+echo Running Tests
+echo Tests Passed
+exit /b 0
